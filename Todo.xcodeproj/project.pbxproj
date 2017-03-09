@@ -15,6 +15,7 @@
 		0CAEE6241E71EDAF00440C22 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE6231E71EDAF00440C22 /* TodoTests.swift */; };
 		0CAEE62F1E71EDAF00440C22 /* TodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE62E1E71EDAF00440C22 /* TodoUITests.swift */; };
 		0CAEE63D1E71F20900440C22 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAEE63C1E71F20900440C22 /* SnapKit.framework */; };
+		0CAEE6401E71F97100440C22 /* XTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE63F1E71F97100440C22 /* XTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0CAEE62E1E71EDAF00440C22 /* TodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoUITests.swift; sourceTree = "<group>"; };
 		0CAEE6301E71EDAF00440C22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CAEE63C1E71F20900440C22 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
+		0CAEE63F1E71F97100440C22 /* XTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				0CAEE6231E71EDAF00440C22 /* TodoTests.swift */,
 				0CAEE6251E71EDAF00440C22 /* Info.plist */,
+				0CAEE63F1E71F97100440C22 /* XTests.swift */,
 			);
 			path = TodoTests;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CAEE6401E71F97100440C22 /* XTests.swift in Sources */,
 				0CAEE6241E71EDAF00440C22 /* TodoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
