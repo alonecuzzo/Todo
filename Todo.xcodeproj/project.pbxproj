@@ -14,6 +14,7 @@
 		0CAEE6191E71EDAF00440C22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CAEE6171E71EDAF00440C22 /* LaunchScreen.storyboard */; };
 		0CAEE6241E71EDAF00440C22 /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE6231E71EDAF00440C22 /* TodoTests.swift */; };
 		0CAEE62F1E71EDAF00440C22 /* TodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAEE62E1E71EDAF00440C22 /* TodoUITests.swift */; };
+		0CAEE63D1E71F20900440C22 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAEE63C1E71F20900440C22 /* SnapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		0CAEE62A1E71EDAF00440C22 /* TodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CAEE62E1E71EDAF00440C22 /* TodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoUITests.swift; sourceTree = "<group>"; };
 		0CAEE6301E71EDAF00440C22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CAEE63C1E71F20900440C22 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CAEE63D1E71F20900440C22 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +100,7 @@
 		0CAEE60D1E71EDAF00440C22 /* Todo */ = {
 			isa = PBXGroup;
 			children = (
+				0CAEE63C1E71F20900440C22 /* SnapKit.framework */,
 				0CAEE60E1E71EDAF00440C22 /* AppDelegate.swift */,
 				0CAEE6101E71EDAF00440C22 /* ViewController.swift */,
 				0CAEE6121E71EDAF00440C22 /* Main.storyboard */,
@@ -135,6 +139,7 @@
 				0CAEE6071E71EDAF00440C22 /* Sources */,
 				0CAEE6081E71EDAF00440C22 /* Frameworks */,
 				0CAEE6091E71EDAF00440C22 /* Resources */,
+				0CAEE63E1E71F22000440C22 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -256,6 +261,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CAEE63E1E71F22000440C22 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Snapkit.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0CAEE6071E71EDAF00440C22 /* Sources */ = {
@@ -416,6 +439,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WRHWKXLX7C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Todo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ustwo.Todo;
@@ -429,6 +456,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WRHWKXLX7C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Todo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ustwo.Todo;
