@@ -14,7 +14,7 @@ struct TodoViewModel {
     private let datasource = ["Walk dog", "Take out the trash", "Call Mom"]
     
     
-    func transformedDatasource() -> [String] {
+    func transformedDatasource(_ string:String) -> [String] {
         
         var temp = [String]()
         
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     let viewModel = TodoViewModel()
     
     fileprivate lazy var datasource: [String] = {
-        return self.viewModel.transformedDatasource()
+        return self.viewModel.transformedDatasource("")
     }()
 
     

@@ -11,10 +11,16 @@ import XCTest
 @testable import Todo //DONT FORGET
 
 
+
 class XTests: XCTestCase {
     
-    func testThatSomething() {
+    let td = TodoViewModel()
+    
+    func testTransformedData() {
         
+        let s = td.transformedDatasource("Jerry")
+        
+        XCTAssert(s[0] == "Jerry:")
     }
     
 }
