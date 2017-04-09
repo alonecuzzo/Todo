@@ -9,10 +9,8 @@
 import UIKit
 import SnapKit
 
-
 struct TodoViewModel {
-    private let datasource = ["Walk dog", "Take out the trash", "Call Mom"]
-    
+    var datasource = ["Walk dog", "Take out the trash", "Call Mom"]
     
     func transformedDatasource() -> [String] {
         
@@ -21,11 +19,9 @@ struct TodoViewModel {
         for item in datasource {
             temp.append(item + ":")
         }
-        
         return temp
     }
 }
-
 
 class ViewController: UIViewController {
     
