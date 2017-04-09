@@ -14,13 +14,18 @@ import XCTest
 
 class XTests: XCTestCase {
     
-    let td = TodoViewModel()
+    private var td = TodoViewModel()
     
-    func testTransformedData() {
+    func testTransformedDatasource() {
         
-        let s = td.transformedDatasource("Jerry")
+        let mockDataSource = ["Jerry"]
         
-        XCTAssert(s[0] == "Jerry:")
+        td.datasource = mockDataSource
+        
+        let transformedData = td.transformedDatasource()
+        
+        print(transformedData)
+        XCTAssert(transformedData.contains("Jerry:"))
     }
     
 }

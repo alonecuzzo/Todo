@@ -9,23 +9,19 @@
 import UIKit
 import SnapKit
 
-
 struct TodoViewModel {
-    private let datasource = ["Walk dog", "Take out the trash", "Call Mom"]
+    var datasource = ["Walk dog", "Take out the trash", "Call Mom"]
     
-    
-    func transformedDatasource(_ string:String) -> [String] {
+    func transformedDatasource() -> [String] {
         
         var temp = [String]()
         
         for item in datasource {
             temp.append(item + ":")
         }
-        
         return temp
     }
 }
-
 
 class ViewController: UIViewController {
     
@@ -36,7 +32,7 @@ class ViewController: UIViewController {
     let viewModel = TodoViewModel()
     
     fileprivate lazy var datasource: [String] = {
-        return self.viewModel.transformedDatasource("")
+        return self.viewModel.transformedDatasource()
     }()
 
     
